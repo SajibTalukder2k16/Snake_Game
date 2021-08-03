@@ -1,8 +1,8 @@
 let inputDir ={x:0,y:0}
-const foodSound = new Audio('Snake_Game/audio/eating.wav')
-const gameOverSound = new Audio('Snake_Game/audio/game_over.wav')
-const moveSound = new Audio('Snake_Game/audio/direction_change.wav')
-const musicSound = new Audio('Snake_Game/audio/bg_music.mp3')
+const foodSound = new Audio('../audio/eating.wav')
+const gameOverSound = new Audio('../audio/game_over.wav')
+const moveSound = new Audio('../audio/direction_change.wav')
+const musicSound = new Audio('../audio/bg_music.mp3')
 let score=0;
 let speed = 5;
 let lastPaintTime=0;
@@ -51,7 +51,7 @@ function gameEngine()
         inputDir ={x:0,y:0}
         alert("Game Over")
         snakeArr = [{x:13,y:15}]
-        musicSound.play();
+        //musicSound.play();
         score=0;
         speed=5;
         scoreBox.innerHTML="Score: "+score;
@@ -111,7 +111,7 @@ function gameEngine()
 }
 
 
-musicSound.play();
+//musicSound.play();
 //main logic
 window.requestAnimationFrame(main)
 window.addEventListener('keydown',e=>{
